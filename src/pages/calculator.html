@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Velas Aromáticas</title>
+    <link rel="stylesheet" href="/src/css/calculator.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Calculadora de Fragancias</h1>
+        <p>Calcular la cantidad exacta de cera y fragancia nunca fue tan fácil.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="./us.html">Productos</a></li>
+            <li><a href="./about.html">Sobre nosotros</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div id="mensaje" class="mensaje oculto"></div>
+
+        <!-- TODO EL CÁLCULO DENTRO DE UN SOLO FORM -->
+        <form id="form-calculadora" class="calculator-layout">
+
+            <!-- COLUMNA IZQUIERDA: envase + fragancia + botón -->
+            <div class="calculator-left">
+
+                <!-- PASO 1 -->
+                <section id="sec-envase">
+                    <h2>1. Seleccionar el envase</h2>
+
+                    <div class="envases-grid">
+                        <label class="card-envase">
+                            <input type="radio" name="envase" value="150">
+                            <img src="/src/assets/envases/150ml.png" width="130" alt="Envase 150 ml">
+                            <span>150 ml</span>
+                        </label>
+
+                        <label class="card-envase">
+                            <input type="radio" name="envase" value="200">
+                            <img src="/src/assets/envases/envases.png" width="130" alt="Envase 200 ml">
+                            <span>200 ml</span>
+                        </label>
+
+                        <label class="card-envase">
+                            <input type="radio" name="envase" value="300">
+                            <img src="/src/assets/envases/300ml.png" width="130" alt="Envase 300 ml">
+                            <span>300 ml</span>
+                        </label>
+                    </div>
+
+                    <div class="input-manual">
+                        <label for="mlManual">O ingresar tamaño (ml):</label>
+                        <input type="number" id="mlManual" name="mlManual" placeholder="Ej: 250">
+                    </div>
+
+                </section>
+
+                <!-- PASO 2 -->
+                <section id="sec-fragancia">
+                    <h2>2. Porcentaje de fragancia</h2>
+
+                    <div class="fragancia-wrapper">
+
+                        <div class="fragancia-grid">
+                            <label><input type="radio" name="porcentaje" value="5"> 5%</label>
+                            <label><input type="radio" name="porcentaje" value="7"> 7%</label>
+                            <label><input type="radio" name="porcentaje" value="10"> 10%</label>
+                        </div>
+
+                        <div class="porcentaje-manual">
+                            <label for="porcentajeManual">O ingresa un porcentaje (%):</label>
+                            <input type="number" id="porcentajeManual" name="porcentajeManual" step="0.1"
+                                placeholder="Ej: 6.5">
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- BOTÓN FINAL -->
+                <div class="actions">
+                    <button type="submit">Calcular resultados</button>
+                </div>
+
+            </div>
+
+
+            <aside id="sec-resultado" class="calculator-right">
+                <h2>3. Resultado</h2>
+
+                <div id="resultado" class="resultado-box">
+                    <p class="resultado-placeholder">
+                        Completa los datos y verás aquí el cálculo ✨
+                    </p>
+                </div>
+
+                <button type="button" class="btn-secondary" onclick="location.reload()">Reiniciar</button>
+            </aside>
+
+        </form>
+
+    </main>
+    <footer>
+    </footer>
+
+    <script src="/src/js/calculator.js"></script>
+
+</body>
+
+</html>

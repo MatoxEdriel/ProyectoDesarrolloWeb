@@ -33,7 +33,6 @@ header h1 {
     font-weight: 500;
 }
 
-/* ------- NAV BAR ------- */
 nav {
     background: var(--white);
     border-top: 1px solid var(--nude-light);
@@ -99,8 +98,8 @@ article p {
 article:hover {
     transform: translateY(-4px);
     background: var(--nude-light);
-
 }
+
 footer {
     text-align: center;
     padding: 20px;
@@ -108,4 +107,41 @@ footer {
     background: var(--nude-soft);
     color: var(--text);
     font-size: 0.85rem;
+}
+
+.hero {
+    background: url("/src/assets/images/hero.jpeg") no-repeat center center/cover;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(1px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
